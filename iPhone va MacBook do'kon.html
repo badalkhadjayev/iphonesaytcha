@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>iPhone va MacBook — do’kon</title>
+<style>
+:root{--bg:#fff;--bg2:#f5f5f7;--tx:#1d1d1f;--mu:#6e6e73;--ac:#0071e3;--nav:rgba(255,255,255,.8);--dk:#000;--dk-tx:#f5f5f7;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#000;--bg2:#161617;--tx:#f5f5f7;--mu:#a1a1a6;--ac:#2997ff;--nav:rgba(22,22,23,.8)}}
+:root[data-theme="dark"]{--bg:#000;--bg2:#161617;--tx:#f5f5f7;--mu:#a1a1a6;--ac:#2997ff;--nav:rgba(22,22,23,.8)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:60px}
+body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"Inter","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--ac);text-decoration:none}a:hover{text-decoration:underline}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;height:48px;display:flex;align-items:center;justify-content:center;gap:28px;background:var(--nav);backdrop-filter:saturate(180%) blur(20px);font-size:13px;overflow-x:auto;padding:0 16px}
+nav a{color:var(--tx);opacity:.8;white-space:nowrap}nav b{font-weight:600;white-space:nowrap}
+.sub{background:var(--bg2);text-align:center;padding:14px 16px;font-size:14px}
+section{text-align:center;padding:72px 20px 0;overflow:hidden}
+h1{font-size:clamp(40px,7vw,80px);font-weight:700;letter-spacing:-.03em;line-height:1.05}
+h2{font-size:clamp(32px,5vw,56px);font-weight:700;letter-spacing:-.025em;line-height:1.08}
+.lead{font-size:clamp(19px,2.4vw,28px);color:var(--mu);margin:14px auto 0;max-width:700px;line-height:1.3}
+.cta{display:flex;gap:22px;justify-content:center;margin:22px 0 0;font-size:19px;flex-wrap:wrap}
+.btn{background:var(--ac);color:#fff!important;padding:11px 22px;border-radius:980px;font-size:17px}
+.btn:hover{text-decoration:none;filter:brightness(1.1)}
+/* phone */
+.phone{position:relative;width:min(300px,70vw);aspect-ratio:300/610;margin:48px auto 0;border-radius:52px;background:linear-gradient(145deg,#6b7a8f,#2c3440 60%,#1b2028);padding:9px;box-shadow:0 40px 80px rgba(0,0,0,.35),inset 0 0 0 2px rgba(255,255,255,.15);transform:translateY(0)}
+.phone .scr{width:100%;height:100%;border-radius:44px;background:radial-gradient(circle at 30% 20%,#ffb36b,#ff5e7e 40%,#5b3df5 80%);position:relative;overflow:hidden}
+.phone .scr:before{content:"";position:absolute;top:12px;left:50%;width:34%;height:26px;border-radius:20px;background:#000;transform:translateX(-50%)}
+.phone .scr span{position:absolute;bottom:18%;left:0;right:0;color:#fff;font-size:54px;font-weight:700;letter-spacing:-.03em}
+.phone .cam{position:absolute;top:22px;right:-12px;width:6px;height:70px;border-radius:3px;background:#3a4452}
+.pair{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;align-items:flex-end}
+.pair .phone{margin-top:48px;width:min(240px,60vw)}
+.pair .phone:nth-child(2){width:min(270px,64vw)}
+/* grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;padding:12px;max-width:1300px;margin:0 auto}
+.card{background:var(--bg2);border-radius:28px;padding:44px 24px 0;min-height:520px;display:flex;flex-direction:column;align-items:center;overflow:hidden}
+.card h3{font-size:32px;letter-spacing:-.02em}
+.card p{color:var(--mu);margin-top:8px;font-size:17px}
+.card .cta{margin-top:14px;font-size:17px}
+.card .phone{margin-top:auto;transform:translateY(28px);width:200px;border-radius:40px;padding:7px}
+.card .phone .scr{border-radius:34px}.card .phone .scr:before{height:20px;top:9px}.card .phone .scr span{font-size:34px}
+.c2 .scr{background:radial-gradient(circle at 70% 20%,#9be7ff,#3d7bff 55%,#14224f)}
+.c3 .scr{background:radial-gradient(circle at 30% 30%,#d9ffb8,#3cc48a 55%,#0b3b33)}
+.c4 .scr{background:radial-gradient(circle at 50% 20%,#f1f1f4,#a5a9b5 55%,#2d3038)}
+/* mac */
+.dark{background:var(--dk);color:var(--dk-tx);padding-bottom:0}
+.dark .lead{color:#a1a1a6}.dark a{color:#2997ff}.dark .btn{color:#fff}
+.mac{width:min(720px,92vw);margin:48px auto 0}
+.mac .lid{aspect-ratio:16/10.2;border-radius:18px 18px 0 0;background:#2a2c31;padding:2.2% 2.2% 3%;box-shadow:inset 0 0 0 2px #4a4d55}
+.mac .lid .scr{width:100%;height:100%;border-radius:6px;background:linear-gradient(135deg,#0f2a6b,#6d3df0 50%,#ff6a88);position:relative;display:grid;place-items:center;color:#fff;font-weight:700;font-size:clamp(22px,5vw,46px);letter-spacing:-.02em}
+.mac .lid .scr:before{content:"";position:absolute;top:0;left:50%;width:7%;height:3.5%;background:#000;border-radius:0 0 8px 8px;transform:translateX(-50%)}
+.mac .base{height:16px;margin:0 -4%;border-radius:0 0 22px 22px;background:linear-gradient(#c8cbd2,#9fa3ad);position:relative}
+.mac .base:after{content:"";position:absolute;left:50%;top:0;width:16%;height:7px;border-radius:0 0 10px 10px;background:#80838c;transform:translateX(-50%)}
+.macs{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;padding:12px;max-width:1300px;margin:48px auto 0}
+.macs .card{background:#161617;color:var(--dk-tx);min-height:480px}
+.macs .card p{color:#a1a1a6}
+.macs .mac{margin-top:auto;width:100%;transform:translateY(8px)}
+.macs .mac .scr{font-size:clamp(18px,3vw,28px)}
+/* feats */
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:36px;max-width:1100px;margin:56px auto 0;padding:0 20px 80px;text-align:left}
+.feats h4{font-size:21px;margin-bottom:8px;letter-spacing:-.01em}.feats p{color:var(--mu);font-size:16px;line-height:1.45}
+.dark .feats p{color:#a1a1a6}
+.tbl-wrap{max-width:960px;margin:40px auto 0;overflow-x:auto;text-align:left}
+table{width:100%;border-collapse:collapse;min-width:560px;font-size:16px}
+th,td{padding:16px 14px;border-bottom:1px solid rgba(128,128,128,.3)}th{font-size:19px}td:first-child{color:var(--mu);width:24%}
+footer{background:var(--bg2);color:var(--mu);font-size:12px;padding:28px 20px;margin-top:80px;text-align:center;line-height:1.6}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+</style>
+</head>
+<body>
+<nav aria-label="Asosiy">
+<b>Texnomarket</b><a href="#iphone">iPhone</a><a href="#mac">MacBook</a><a href="#taqqos">Taqqoslash</a><a href="#narx">Narxlar</a><a href="#narx">Savat</a>
+</nav>
+<div class="sub">Yangi modellar omborda. Bepul yetkazib berish va 12 oygacha muddatli to’lov. <a href="#narx">Xarid qilish ›</a></div>
+
+<section id="iphone">
+<h1>iPhone</h1>
+<p class="lead">Kuchli chip. Ravshan ekran. Kun bo’yi ishlaydigan batareya.</p>
+<div class="cta"><a class="btn" href="#narx">Sotib olish</a><a href="#taqqos">Modellarni taqqoslash ›</a></div>
+<div class="pair" aria-hidden="true">
+<div class="phone"><i class="cam"></i><div class="scr"><span>Pro</span></div></div>
+<div class="phone"><i class="cam"></i><div class="scr"><span>Pro Max</span></div></div>
+</div>
+</section>
+
+<div class="grid" style="margin-top:72px">
+<div class="card"><h3>Pro Max</h3><p>Eng katta ekran, eng uzun batareya.</p><div class="cta"><a href="#narx">Batafsil ›</a><a href="#narx">Sotib olish ›</a></div><div class="phone" aria-hidden="true"><div class="scr"><span>Max</span></div></div></div>
+<div class="card c2"><h3>Pro</h3><p>Professional kamera tizimi.</p><div class="cta"><a href="#narx">Batafsil ›</a><a href="#narx">Sotib olish ›</a></div><div class="phone" aria-hidden="true"><div class="scr"><span>Pro</span></div></div></div>
+<div class="card c3"><h3>Standart</h3><p>Har kuni uchun ajoyib tanlov.</p><div class="cta"><a href="#narx">Batafsil ›</a><a href="#narx">Sotib olish ›</a></div><div class="phone" aria-hidden="true"><div class="scr"><span>Air</span></div></div></div>
+<div class="card c4"><h3>Mini</h3><p>Ixcham, yengil va arzon.</p><div class="cta"><a href="#narx">Batafsil ›</a><a href="#narx">Sotib olish ›</a></div><div class="phone" aria-hidden="true"><div class="scr"><span>e</span></div></div></div>
+</div>
+
+<section class="dark" id="mac" style="margin-top:12px;padding-top:88px">
+<h1>MacBook</h1>
+<p class="lead">Ish, o’qish va ijod uchun yaratilgan noutbuklar. Batareya butun kunga yetadi.</p>
+<div class="cta"><a class="btn" href="#narx">Sotib olish</a><a href="#taqqos">Modellarni taqqoslash ›</a></div>
+<div class="mac" aria-hidden="true"><div class="lid"><div class="scr">MacBook Pro</div></div><div class="base"></div></div>
+<div class="macs">
+<div class="card"><h3>MacBook Pro</h3><p>Dasturchilar va dizaynerlar uchun maksimal quvvat.</p><div class="cta"><a href="#narx">Batafsil ›</a><a href="#narx">Sotib olish ›</a></div><div class="mac" aria-hidden="true"><div class="lid"><div class="scr">Pro</div></div><div class="base"></div></div></div>
+<div class="card"><h3>MacBook Air</h3><p>Juda yengil, jimjit va tezkor.</p><div class="cta"><a href="#narx">Batafsil ›</a><a href="#narx">Sotib olish ›</a></div><div class="mac" aria-hidden="true"><div class="lid"><div class="scr" style="background:linear-gradient(135deg,#0d6e6e,#35d0a0 60%,#f4ff9a)">Air</div></div><div class="base"></div></div></div>
+</div>
+<div class="feats">
+<div><h4>Uzun batareya</h4><p>Bir zaryadda butun ish kuni va undan ham ko’proq.</p></div>
+<div><h4>Ravshan ekran</h4><p>Rang aniqligi yuqori, quyoshda ham yaxshi ko’rinadi.</p></div>
+<div><h4>Tez chip</h4><p>Og’ir dasturlar va video montaj ham qotmasdan ishlaydi.</p></div>
+<div><h4>Kafolat</h4><p>Rasmiy kafolat va servis xizmati.</p></div>
+</div>
+</section>
+
+<section id="taqqos">
+<h2>Qaysi biri sizga mos?</h2>
+<p class="lead">Asosiy xususiyatlarni yonma-yon ko’ring.</p>
+<div class="tbl-wrap"><table>
+<tr><th></th><th>Pro Max</th><th>Pro</th><th>MacBook Air</th><th>MacBook Pro</th></tr>
+<tr><td>Ekran</td><td>6.9"</td><td>6.3"</td><td>13.6"</td><td>14.2"</td></tr>
+<tr><td>Batareya</td><td>Juda uzun</td><td>Uzun</td><td>18 soatgacha</td><td>22 soatgacha</td></tr>
+<tr><td>Kamera</td><td>Uchta, 5x zum</td><td>Uchta</td><td>1080p</td><td>1080p</td></tr>
+<tr><td>Xotira</td><td>256 GB – 1 TB</td><td>128 GB – 1 TB</td><td>256 GB – 2 TB</td><td>512 GB – 4 TB</td></tr>
+</table></div>
+</section>
+
+<section id="narx">
+<h2>Xarid qilishga tayyormisiz?</h2>
+<p class="lead">Do’konimizga keling yoki buyurtmani onlayn bering.</p>
+<div class="cta"><a class="btn" href="#iphone">iPhone tanlash</a><a href="#mac">MacBook tanlash ›</a></div>
+</section>
+
+<footer>Bu namunaviy sayt. Mahsulot tasvirlari CSS bilan chizilgan, haqiqiy rasmlar bilan almashtiring.<br>© 2026 Texnomarket. Barcha huquqlar himoyalangan.</footer>
+</body>
+</html>
